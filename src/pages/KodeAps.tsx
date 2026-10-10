@@ -173,6 +173,11 @@ const screens = [
     description: 'Relatório nominal em PDF — padrão exportável (Indicador C5 Hipertensão).',
     image: '/images/relatorio-nominal-pdf.png',
   },
+  {
+    id: 'mapa-visitas', label: 'Mapa Inteligente de Visitas', icon: Map,
+    description: 'Visualização em mapa das visitas domiciliares registradas com geolocalização.',
+    image: '/images/mapa-visitas-acs.png',
+  },
 ];
 
 const faqs = [
