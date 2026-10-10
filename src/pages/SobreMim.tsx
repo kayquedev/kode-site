@@ -1,5 +1,19 @@
-import { Code2, HeartPulse, GraduationCap, School, Briefcase } from 'lucide-react';
+import { Code2, HeartPulse, GraduationCap, School, Briefcase, Monitor, Activity, FileText, Database, Server, Users, Shield } from 'lucide-react';
 import SectionTitle from '../components/ui/SectionTitle';
+
+const systems = [
+  { name: 'eSUS PEC', icon: Monitor },
+  { name: 'eSUS Território', icon: Activity },
+  { name: 'eSUS Regulação', icon: FileText },
+  { name: 'eSUS AF/SIGAF', icon: FileText },
+  { name: 'SIA/SUS', icon: Database },
+  { name: 'BPA', icon: FileText },
+  { name: 'CNES', icon: Server },
+  { name: 'SISPNCD/LOCALIDADE', icon: Activity },
+  { name: 'CADSUS/CADWEB', icon: Users },
+  { name: 'RNDS', icon: Shield },
+  { name: 'TABWIN/TABNET', icon: Database },
+];
 
 const timeline = [
   {
@@ -95,6 +109,34 @@ const SobreMim: React.FC = () => {
                 }}
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Sistemas com Experiência */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
+        <div className="bg-white rounded-3xl border border-slate-200 p-8 md:p-12 shadow-sm">
+          <div className="flex items-center gap-3 mb-8">
+            <div className="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center">
+              <Database size={20} className="text-blue-600" />
+            </div>
+            <div>
+              <h3 className="text-xl font-black text-slate-900">Sistemas que Kayque tem Experiência</h3>
+              <p className="text-sm text-slate-500">Conhecimento prático nos principais sistemas de informação do SUS</p>
+            </div>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+            {systems.map((system) => (
+              <div
+                key={system.name}
+                className="flex items-center gap-3 p-3 rounded-xl bg-slate-50 border border-slate-100 hover:border-blue-200 hover:bg-blue-50/50 transition-all group"
+              >
+                <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center shrink-0 shadow-sm group-hover:shadow-md transition-shadow">
+                  <system.icon size={16} className="text-blue-600" />
+                </div>
+                <span className="text-sm font-semibold text-slate-700">{system.name}</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
