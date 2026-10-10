@@ -168,6 +168,11 @@ const screens = [
     description: 'Listas nominais de cidadãos com pendências para ação das equipes.',
     image: '/images/nominal-indicadores.jpeg',
   },
+  {
+    id: 'nominal-pdf', label: 'Relatórios Nominais PDF', icon: FileCheck,
+    description: 'Relatório nominal em PDF — padrão exportável (Indicador C5 Hipertensão).',
+    image: '/images/relatorio-nominal-pdf.png',
+  },
 ];
 
 const faqs = [
