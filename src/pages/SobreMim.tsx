@@ -1,13 +1,42 @@
-import { Code2, HeartPulse, Database, LineChart, Rocket, Briefcase } from 'lucide-react';
+import { Code2, HeartPulse, GraduationCap, School, Briefcase } from 'lucide-react';
 import SectionTitle from '../components/ui/SectionTitle';
 
 const timeline = [
-  { icon: Code2, title: 'Tecnologia', desc: 'Formação e paixão por desenvolvimento de sistemas.' },
-  { icon: HeartPulse, title: 'Saúde Pública', desc: 'Atuação prática na Atenção Primária e gestão municipal.' },
-  { icon: Database, title: 'Sistemas de Informação', desc: 'Experiência com e-SUS, SIA, SIH e bases de dados do SUS.' },
-  { icon: LineChart, title: 'Análise de Dados', desc: 'Transformação de dados brutos em inteligência gerencial.' },
-  { icon: Rocket, title: 'Desenvolvimento de Soluções', desc: 'Criação de ferramentas para resolver problemas reais.' },
-  { icon: Briefcase, title: 'Kode Saúde', desc: 'Fundação da empresa para unir tecnologia e saúde pública.' },
+  {
+    icon: Code2,
+    title: 'Tecnologia',
+    date: '',
+    desc: 'Paixão por desenvolvimento de sistemas.',
+    subtitle: ''
+  },
+  {
+    icon: HeartPulse,
+    title: 'Saúde Pública',
+    date: 'maio de 2023 - o momento',
+    desc: 'Atuação prática na Atenção Primária e Sistemas de Informação.',
+    subtitle: ''
+  },
+  {
+    icon: School,
+    title: 'Formação Técnica',
+    date: 'agosto de 2022 - agosto de 2024',
+    desc: 'Desenvolvimento de Sistemas',
+    subtitle: 'Presencial - Proz Divinópolis MG'
+  },
+  {
+    icon: GraduationCap,
+    title: 'Formação Superior',
+    date: 'fev. de 2022 – fev. de 2024',
+    desc: 'Tecnólogo em Análise e Desenvolvimento de Sistemas',
+    subtitle: 'Faculdade Pitágoras Divinópolis MG'
+  },
+  {
+    icon: Briefcase,
+    title: 'Kode Saúde',
+    date: '2026',
+    desc: 'Fundação da empresa para unir tecnologia e saúde pública.',
+    subtitle: ''
+  },
 ];
 
 const SobreMim: React.FC = () => {
@@ -89,8 +118,16 @@ const SobreMim: React.FC = () => {
                   {/* Content Card */}
                   <div className="flex-1 ml-16 md:ml-0">
                     <div className={`bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow ${idx % 2 === 0 ? 'md:text-right' : ''}`}>
+                      {item.date && (
+                        <span className={`inline-block text-xs font-bold text-blue-600 uppercase tracking-wider mb-2 ${idx % 2 === 0 ? 'md:text-right' : ''}`}>
+                          {item.date}
+                        </span>
+                      )}
                       <h3 className="text-xl font-bold text-slate-900 mb-2">{item.title}</h3>
-                      <p className="text-slate-600">{item.desc}</p>
+                      <p className="text-slate-600 mb-1">{item.desc}</p>
+                      {item.subtitle && (
+                        <p className="text-sm text-slate-400 font-medium">{item.subtitle}</p>
+                      )}
                     </div>
                   </div>
 
