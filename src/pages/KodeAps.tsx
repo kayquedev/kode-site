@@ -6,7 +6,7 @@ import {
   Copy, UserX, UserCheck, Calendar, Stethoscope, ArrowUpRight, Database,
   RefreshCw, ArrowDown, Lock, UserCog, EyeOff, Server, Zap, Lightbulb, Map,
   Building2, Activity, FileBarChart, LayoutDashboard, FileText, ChevronDown,
-  ChevronUp, MessageCircle, Play, Footprints, Receipt, ScrollText, X
+  ChevronUp, MessageCircle, Play, Footprints, Receipt, ScrollText, X, Syringe
 } from 'lucide-react';
 
 /* ─── Zoomable Image Component ─── */
@@ -198,41 +198,17 @@ const screens = [
   {
     id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard,
     description: 'Visão geral com KPIs, alertas e acesso rápido aos módulos.',
-    mockup: (
-      <div className="space-y-3">
-        <div className="grid grid-cols-3 gap-2">{[1, 2, 3].map((i) => <div key={i} className="bg-blue-50 rounded-lg p-3 h-16" />)}</div>
-        <div className="bg-slate-50 rounded-lg p-3 h-24 border border-slate-100" />
-        <div className="space-y-2">{[1, 2].map((i) => (<div key={i} className="flex gap-2 items-center p-2 bg-white rounded border border-slate-100"><div className="w-8 h-8 bg-slate-100 rounded-full" /><div className="flex-1 h-2 bg-slate-100 rounded" /></div>))}</div>
-      </div>
-    ),
+    image: '/images/dashboards-overview.png',
   },
   {
-    id: 'indicadores', label: 'Indicadores', icon: BarChart3,
-    description: 'Monitoramento de desempenho com classificação visual automática.',
-    mockup: (
-      <div className="space-y-3">
-        <div className="flex justify-between items-center"><div className="h-4 w-24 bg-slate-200 rounded" /><div className="h-6 w-16 bg-emerald-100 rounded-full" /></div>
-        <div className="flex items-end gap-1 h-20">{[40, 60, 45, 80, 55, 70].map((h, i) => <div key={i} className="flex-1 bg-blue-500/70 rounded-t" style={{ height: `${h}%` }} />)}</div>
-        <div className="grid grid-cols-2 gap-2"><div className="bg-emerald-50 rounded p-2 h-12" /><div className="bg-amber-50 rounded p-2 h-12" /></div>
-      </div>
-    ),
+    id: 'vacinação', label: 'Vacinação — Imunos', icon: Syringe,
+    description: 'Doses esperadas vs. aplicadas por imunobiológico e cidadão.',
+    image: '/images/vacinacao-imunos.png',
   },
   {
-    id: 'relatorios', label: 'Relatórios Nominais', icon: FileText,
-    description: 'Listas de cidadãos com pendências para ação das equipes.',
-    mockup: (
-      <div className="space-y-2">{[1, 2, 3, 4].map((i) => (<div key={i} className="flex items-center gap-2 p-2 bg-white border border-slate-100 rounded"><div className="w-6 h-6 bg-slate-100 rounded-full" /><div className="flex-1 space-y-1"><div className="h-2 w-20 bg-slate-200 rounded" /><div className="h-1.5 w-12 bg-slate-100 rounded" /></div><div className="h-4 w-10 bg-amber-100 rounded-full" /></div>))}</div>
-    ),
-  },
-  {
-    id: 'territorio', label: 'Mapa Territorial', icon: MapPin,
-    description: 'Geolocalização de domicílios e cobertura de visitas.',
-    mockup: (
-      <div className="relative bg-blue-50/50 rounded-lg h-32 border border-blue-100 overflow-hidden">
-        <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(circle, #2563eb 1px, transparent 1px)', backgroundSize: '12px 12px' }} />
-        {[{ top: '20%', left: '30%' }, { top: '50%', left: '60%' }, { top: '70%', left: '25%' }, { top: '35%', left: '75%' }].map((pos, i) => <div key={i} className="absolute w-3 h-3 bg-blue-600 rounded-full shadow-sm" style={pos} />)}
-      </div>
-    ),
+    id: 'nominal', label: 'Relatórios Nominais', icon: FileText,
+    description: 'Listas nominais de cidadãos com pendências para ação das equipes.',
+    image: '/images/nominal-indicadores.jpeg',
   },
 ];
 
@@ -850,7 +826,7 @@ const KodeAps: React.FC = () => {
                       <p className="text-xs text-slate-500">{currentScreen.description}</p>
                     </div>
                   </div>
-                  {currentScreen.mockup}
+                  <ZoomableImage src={currentScreen.image} alt={currentScreen.label} className="w-full h-auto block rounded-lg" />
                 </div>
               </div>
             </div>
