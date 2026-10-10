@@ -5,7 +5,7 @@ import {
   SearchX, PieChart, Clock, TrendingUp, ShieldCheck, CheckCircle2, AlertCircle,
   Copy, UserX, UserCheck, Calendar, Stethoscope, ArrowUpRight, Database,
   RefreshCw, ArrowDown, Lock, UserCog, EyeOff, Server, Zap, Lightbulb, Map,
-  Building2, Activity, FileBarChart, LayoutDashboard, FileText, ChevronDown,
+  Activity, LayoutDashboard, FileText, ChevronDown,
   ChevronUp, MessageCircle, Play, X, Syringe, Footprints, Receipt, ScrollText
 } from 'lucide-react';
 
@@ -185,14 +185,6 @@ const benefits = [
   { icon: Map, title: 'Monitore sua APS', desc: 'Tenha visão municipal, por unidade e equipe em um único lugar.', color: 'bg-rose-50', iconColor: 'text-rose-600' },
 ];
 
-const audiences = [
-  { icon: Building2, title: 'Secretaria Municipal de Saúde', desc: 'Visão consolidada de toda a APS municipal para planejamento e gestão estratégica.', color: 'bg-blue-50', iconColor: 'text-blue-600' },
-  { icon: Activity, title: 'Coordenação da APS', desc: 'Acompanhamento de indicadores, qualidade cadastral e desempenho das equipes.', color: 'bg-emerald-50', iconColor: 'text-emerald-600' },
-  { icon: Database, title: 'Coordenação do e-SUS APS', desc: 'Análise da qualidade dos dados e identificação de inconsistências cadastrais.', color: 'bg-indigo-50', iconColor: 'text-indigo-600' },
-  { icon: FileBarChart, title: 'Gestão Municipal', desc: 'Relatórios gerenciais e dashboards para tomada de decisão baseada em evidências.', color: 'bg-slate-100', iconColor: 'text-slate-700' },
-  { icon: Users, title: 'Equipes de Saúde da Família', desc: 'Listas nominais e pendências para direcionar o trabalho diário das equipes.', color: 'bg-amber-50', iconColor: 'text-amber-600' },
-  { icon: Stethoscope, title: 'Informação em Saúde', desc: 'Dados organizados para análise, monitoramento e relatórios técnicos.', color: 'bg-rose-50', iconColor: 'text-rose-600' },
-];
 
 const screens = [
   {
@@ -758,33 +750,7 @@ const KodeAps: React.FC = () => {
         </div>
       </section>
 
-      {/* ── AUDIENCE SECTION ── */}
-      <section className="py-20 lg:py-28 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="inline-block px-3 py-1 bg-indigo-50 border border-indigo-100 rounded-full text-xs font-bold text-indigo-700 uppercase tracking-widest mb-4">Público-Alvo</span>
-            <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mb-6">
-              Para quem é o{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-700">Kode APS</span>
-            </h2>
-            <p className="text-lg text-slate-600 leading-relaxed">
-              Uma plataforma pensada para todos os profissionais envolvidos na gestão e operação da Atenção Primária à Saúde.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {audiences.map((a) => (
-              <div key={a.title} className="group bg-white border border-slate-200 rounded-2xl p-6 hover:border-indigo-300 hover:shadow-lg transition-all duration-300">
-                <div className={`w-14 h-14 ${a.color} rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform`}>
-                  <a.icon size={28} className={a.iconColor} />
-                </div>
-                <h3 className="text-lg font-bold text-slate-900 mb-3">{a.title}</h3>
-                <p className="text-sm text-slate-500 leading-relaxed">{a.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
+      
       {/* ── PLATFORM PREVIEW ── */}
       <section className="py-20 lg:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
