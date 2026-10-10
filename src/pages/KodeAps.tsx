@@ -6,7 +6,7 @@ import {
   Copy, UserX, UserCheck, Calendar, Stethoscope, ArrowUpRight, Database,
   RefreshCw, ArrowDown, Lock, UserCog, EyeOff, Server, Zap, Lightbulb, Map,
   Building2, Activity, FileBarChart, LayoutDashboard, FileText, ChevronDown,
-  ChevronUp, MessageCircle, Play
+  ChevronUp, MessageCircle, Play, Footprints, Receipt, ScrollText
 } from 'lucide-react';
 
 /* ─── Data ─── */
@@ -19,13 +19,103 @@ const problems = [
   { icon: AlertTriangle, title: 'Inconsistências cadastrais', desc: 'Dados incompletos, duplicados ou desatualizados que comprometem indicadores e repasses.' },
 ];
 
-const modules = [
-  { icon: TrendingUp, title: 'Indicadores APS', desc: 'Monitoramento dos resultados municipais, por unidade, equipe e cidadão com classificação visual automática.', color: 'bg-emerald-50', iconColor: 'text-emerald-600' },
-  { icon: ShieldCheck, title: 'Qualidade dos Cadastros', desc: 'Análise de inconsistências, dados incompletos, duplicidades e necessidade de atualização cadastral.', color: 'bg-amber-50', iconColor: 'text-amber-600' },
-  { icon: FileCheck, title: 'Relatórios Nominais', desc: 'Identificação dos cidadãos que precisam de acompanhamento, boa prática ou atualização.', color: 'bg-blue-50', iconColor: 'text-blue-600' },
-  { icon: Users, title: 'Monitoramento de Equipes', desc: 'Visualização dos resultados das equipes de Saúde da Família e eMulti em tempo real.', color: 'bg-indigo-50', iconColor: 'text-indigo-600' },
-  { icon: BarChart3, title: 'Gestão Municipal', desc: 'Visão consolidada da APS com relatórios gerenciais e apoio à tomada de decisão.', color: 'bg-slate-100', iconColor: 'text-slate-700' },
-  { icon: MapPin, title: 'Análise Territorial', desc: 'Mapas inteligentes de visitas domiciliares, geolocalização e cobertura territorial.', color: 'bg-rose-50', iconColor: 'text-rose-600' },
+const solutionModules = [
+  {
+    icon: LayoutDashboard,
+    title: 'Painel de Atendimento',
+    desc: 'Visão geral e consolidada dos registros de atendimentos, com painéis personalizados por ESF/EAP, Odontológico e eMulti, e comparações por unidade/equipe.',
+    color: 'bg-blue-50',
+    iconColor: 'text-blue-600',
+    items: [
+      'Painéis personalizados por tipo de equipe (ESF/EAP, Odonto, eMulti)',
+      'Comparação de produção por unidade e equipe',
+      'Visão consolidada de atendimentos',
+    ],
+  },
+  {
+    icon: ShieldCheck,
+    title: 'Qualidade Cadastro',
+    desc: 'Análise completa da integridade dos cadastros do cidadão, domiciliares e territoriais, com detecção automática de inconsistências e duplicidades.',
+    color: 'bg-amber-50',
+    iconColor: 'text-amber-600',
+    items: [
+      'Cidadão PEC — Prontuário Cidadão',
+      'Cadastros Domiciliares Territoriais',
+      'Ficha de Cadastro Individual (FCI) e qualidade FCI',
+      'Cidadãos Duplicados e Qualidade Cidadão PEC',
+      'Geolocalização de Cadastro Domiciliar',
+      'FCI Individual Nominal — Autorreferido ACS',
+    ],
+  },
+  {
+    icon: Footprints,
+    title: 'Acompanhamento Território',
+    desc: 'Monitoramento de visitas domiciliares, cobertura territorial e mapas inteligentes para planejamento das ações dos ACS/ACE.',
+    color: 'bg-emerald-50',
+    iconColor: 'text-emerald-600',
+    items: [
+      'Visitas Domiciliares — Consolidado e Nominal',
+      'Calendário mensal de visitas ACS/ACE',
+      'Mapa Inteligente de Visitas (relevo/satélite)',
+      'Cobertura de Visitas vs. metas municipais',
+      'Mapa Inteligente Territorial de domicílios',
+      'Beneficiários Bolsa Família cruzados com e-SUS',
+      'IVCF-20+ para idosos ≥ 60 anos',
+      'TRIA — Risco de Insegurança Alimentar',
+    ],
+  },
+  {
+    icon: TrendingUp,
+    title: 'Indicadores',
+    desc: 'Monitoramento quantitativo e qualitativo do desempenho municipal, por equipe e por programas específicos.',
+    color: 'bg-indigo-50',
+    iconColor: 'text-indigo-600',
+    items: [
+      'Desempenho Municipal geral',
+      'Indicadores ESF/eAP (C1 a C7 + Vínculo)',
+      'Indicadores eMULTI e eSB',
+      'Indicadores POEPS (MG)',
+      'Indicadores PSE — Saúde na Escola',
+    ],
+  },
+  {
+    icon: ScrollText,
+    title: 'Relatórios',
+    desc: 'Listagens nominais e consolidadas de atendimentos, prescrições, vacinação, condições de saúde e sincronizações.',
+    color: 'bg-rose-50',
+    iconColor: 'text-rose-600',
+    items: [
+      'Atendimento Individual — nominal e consolidado',
+      'Prescrição de Medicamentos',
+      'Vacinação — Imunos (doses esperadas vs. aplicadas)',
+      'Condições de Saúde Ativa (CID/CIAP)',
+      'Sincronizações de ACS/ACE/TACS',
+    ],
+  },
+  {
+    icon: Receipt,
+    title: 'Faturamento',
+    desc: 'Extração e validação de procedimentos ambulatoriais do e-SUS PEC para geração do BPA magnético.',
+    color: 'bg-orange-50',
+    iconColor: 'text-orange-600',
+    items: [
+      'BPA-I e BPA-C contra SIGTAP',
+      'Validação de risco de glosa',
+      'Geração de arquivo BPA magnético para SIA',
+    ],
+  },
+  {
+    icon: UserCog,
+    title: 'Gestão e Logs',
+    desc: 'Controle de profissionais, lotações, perfis de acesso e histórico completo de auditoria do sistema.',
+    color: 'bg-slate-100',
+    iconColor: 'text-slate-700',
+    items: [
+      'Profissionais — lotações, CBO e perfis de acesso',
+      'Histórico de acessos e ações (últimos 3 meses)',
+      'Auditoria de administradores e gestores',
+    ],
+  },
 ];
 
 const cadastroFeatures = [
@@ -251,13 +341,21 @@ const KodeAps: React.FC = () => {
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {modules.map((m) => (
-              <div key={m.title} className="group bg-white border border-slate-200 rounded-2xl p-6 hover:border-blue-300 hover:shadow-lg transition-all duration-300">
-                <div className={`w-14 h-14 ${m.color} rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform`}>
+            {solutionModules.map((m) => (
+              <div key={m.title} className="group bg-white border border-slate-200 rounded-2xl p-6 hover:border-blue-300 hover:shadow-lg transition-all duration-300 flex flex-col">
+                <div className={`w-14 h-14 ${m.color} rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform shrink-0`}>
                   <m.icon size={28} className={m.iconColor} />
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">{m.title}</h3>
-                <p className="text-sm text-slate-500 leading-relaxed">{m.desc}</p>
+                <h3 className="text-xl font-bold text-slate-900 mb-2">{m.title}</h3>
+                <p className="text-sm text-slate-500 leading-relaxed mb-4">{m.desc}</p>
+                <ul className="mt-auto space-y-1.5 pt-4 border-t border-slate-100">
+                  {m.items.map((item) => (
+                    <li key={item} className="flex items-start gap-2 text-xs text-slate-600 leading-snug">
+                      <span className="mt-1 w-1.5 h-1.5 rounded-full bg-blue-400 shrink-0" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>

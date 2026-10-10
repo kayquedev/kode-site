@@ -1,0 +1,124 @@
+Painel de Atendimento
+Visão geral e consolidada dos registros dos atendimentos, com diversos painéis personalizados, separado por (ESF/EAP, Odontológico, eMulti) e comparações por unidade/equipe.
+Também  possibilidade de comparar produção por unidade/equipe.
+
+
+QUALIDADE CADASTRO:
+
+Qualidade Cadastro
+Cidadão PEC - Prontuário Cidadão
+Relatório dos cadastros do cidadão, onde traz as informações da base de dados de: endereço, vínculo, dados pessoais, micro.
+
+Relatório de Cadastros Domiciliares Territoriais
+Relatório dos cadastros domiciliares/familiares do territorio, de forma nominal.
+
+Relatório de Ficha de Cadastros Individuais (FCI)
+Relatório dos cadastros do cidadão, onde traz as informações de: condições de saúde autorreferidas, social, escolares, e demais informações.
+
+Qualidade Ficha de Cadastro Individual (FCI)
+Relatório da integridade e qualidade de dados das fichas de cadastro individuais (FCI):
+Sem Responsável Familiar
+Somente CNS
+Sem CPF/CNS
+Micro FA/NI
+Desatualizados
+Óbitos
++1 Domicílios
+Sem domicílios
+Individual Incompleto 
+
+Qualidade Cidadão PEC
+Relatório da integridade e qualidade de dados dos cadastros do cidadão PEC. O módulo traz o registro do antigo módulo do sistema denominado "CIDADÃO", pois ainda existem tais referências no banco de dados, principalmente cadastros que não possuem FCI.
+Somente CNS
+Sem CPF/CNS
+Sem FCI
+Endereço Incompleto
+Micro FA/NI
+CNS Provisório
+
+Cidadãos Duplicados
+Possíveis cadastros duplicados entre a base do Cidadão e a Ficha de Cadastro Individual (FCI).
+
+Qualidade Cadastro Domiciliar Territorial
+Relatório da integridade e qualidade de dados dos cadastros domiciliares/territoriais.
+
+FCI Individual Nominal - Autorreferido ACS
+Relatório detalhado por ficha de cadastro individual de cada cidadão, podendo realizar filtros das condições de saúde, sociais, escolar, e utilizando os demais parâmetros de filtros.
+
+Cadastro Domiciliar - Geolocalização
+Monitoramento de cobertura GPS nos cadastros domiciliares.
+
+
+ACOMPANHAMENTO TERRITÓRIO:
+
+Acompanhamento de Visitas Domiciliares
+Monitoramento da produção de visitas dos ACS/ACE em forma consolidada e nominal.
+
+Visitas ACS/ACE: Calendário
+Acompanhamento diário de visitas no formato mensal/calendário.
+
+Mapa Inteligente de Visitas Domiciliares
+Visualização em mapa (relevo ou satélite) das visitas registradas com geolocalização ativa pelos ACS/ACE.
+
+Cobertura de Visitas
+Análise da produtividade atráves dos registros de visitas dos ACS/ACE em comparação as metas indicadas pela gestão municipal.
+
+Cadastro Domiciliar - Mapa Inteligente Territorial
+Visualização em mapa de domicílios e cobertura geográfica.
+
+Relatório: Beneficiários do Bolsa Família
+Listagem dos beneficiários da importação oficial do Programa Bolsa Família, cruzados com o cadastro do e-SUS PEC (mesma fonte da tela "Condições de Saúde").
+
+Relatório: IVCF-20+
+Cobertura do Índice de Vulnerabilidade Clínico-Funcional-20 entre os idosos (≥ 60 anos) vinculados à Unidade + Equipe: quem realizou e quem não realizou no período.
+
+Relatório: TRIA — Risco de Insegurança Alimentar
+Triagem de Risco de Insegurança Alimentar (IA) entre as pessoas com cadastro individual ativo. Mostra as respostas da TRIA 1 e TRIA 2, se o domicílio está em risco de IA (qualquer membro respondeu "Sim" às duas) e de quanto em quanto tempo a TRIA deve ser reaplicada: 3 a 6 meses para domicílio em risco, 6 a 12 meses para os demais.
+
+Relatório: Estratificação de Risco (Em breve)
+
+INDICADORES:
+Desempenho Municipal
+Monitoramento quantitativo e qualitativo do desempenho municipal, por indicador geral do município.
+Indicadores da ESF/eAP (C1 a C7 + Vinculo e Acompanhamento)
+Indicadores eMULTI e eSB
+
+Indicadores POEPS (MG)
+Indicadores da Política Estadual de Promoção da Saúde de Minas Gerais (Resolução SES/MG nº 7610 - CIB-SUS/MG nº 562), apurados em nível municipal por quadrimestre.
+
+Indicadores PSE (Saúde na Escola)
+Cobertura das ações do Programa Saúde na Escola nas escolas pactuadas pelo município, apurada por ano civil sobre a Ficha de Atividade Coletiva do e-SUS.
+
+
+RELATÓRIOS:
+
+Relatório: Atendimento Individual
+Listagem nominal e visão consolidada dos atendimentos individuais (tb_fat_atendimento_individual).
+
+Relatório: Prescrição de Medicamentos
+Listagem nominal das receitas registradas a partir de atendimentos individuais (tb_fat_atd_ind_medicamentos).
+
+Relatório: Vacinação - Imunos
+Para cada cidadão da unidade/equipe, compara as doses esperadas pela idade (Calendário Vacinal) com as aplicadas (e-SUS) e mostra quantas faltam por imunobiológico.
+
+Condições Saúde Ativa
+Relatório nominal que traz os cidadãos com condições de saúde ativa, registrada nos atendimentos individuais, seja CID e/ou CIAP. Fonte: problemas/condições registrados em atendimento individual.
+
+Sincronizações
+Última sincronização de cada ACS/ACE/TACS e há quanto tempo cada agente está sem sincronizar o aplicativo e-SUS Território.
+
+FATURAMENTO:
+
+BPA / SIA — Boletim de Produção Ambulatorial
+Extrai os procedimentos (finalizadores) dos atendimentos individuais do e-SUS PEC, decide linha a linha entre BPA-I e BPA-C contra o SIGTAP, valida risco de glosa e gera o arquivo BPA magnético para importação no SIA.
+
+
+GESTÃO:
+
+Profissionais
+Relaciona cada profissional às suas lotações (unidade / equipe / CBO), se a lotação está ativa e quais perfis de acesso estão liberados. Fonte: aba "Profissionais" do e-SUS PEC.
+
+LOGS
+Histórico de acessos
+Este recurso fornece informações como a data e a hora dos acessos, ações no KODE APS, detalhes, dos últimos 3 meses, de todos os usuários do sistema, inclusive dos Administradores e Gestor do Sistema.
+
