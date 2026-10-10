@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kodesaude.com.br/sitemap.xml
