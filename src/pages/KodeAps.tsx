@@ -6,7 +6,7 @@ import {
   Copy, UserX, UserCheck, Calendar, Stethoscope, ArrowUpRight, Database,
   RefreshCw, ArrowDown, Lock, UserCog, EyeOff, Server, Zap, Lightbulb, Map,
   Building2, Activity, FileBarChart, LayoutDashboard, FileText, ChevronDown,
-  ChevronUp, MessageCircle, Play, Footprints, Receipt, ScrollText, X, Syringe
+  ChevronUp, MessageCircle, Play, X, Syringe, ClipboardList
 } from 'lucide-react';
 
 /* ─── Zoomable Image Component ─── */
@@ -57,100 +57,58 @@ const problems = [
 
 const solutionModules = [
   {
-    icon: LayoutDashboard,
-    title: 'Painel de Atendimento',
-    desc: 'Visão geral e consolidada dos registros de atendimentos, com painéis personalizados por ESF/EAP, Odontológico e eMulti, e comparações por unidade/equipe.',
-    color: 'bg-blue-50',
-    iconColor: 'text-blue-600',
-    items: [
-      'Painéis personalizados por tipo de equipe (ESF/EAP, Odonto, eMulti)',
-      'Comparação de produção por unidade e equipe',
-      'Visão consolidada de atendimentos',
-    ],
+    icon: TrendingUp,
+    title: 'Desempenho Municipal Indicadores',
+    desc: 'Acompanhamento dos indicadores do Brasil 360 em tempo real.',
+    tag: 'INDICADORES',
+    tagColor: 'bg-emerald-50 text-emerald-600',
+    iconColor: 'text-emerald-600',
+    iconBg: 'bg-emerald-50',
   },
   {
     icon: ShieldCheck,
-    title: 'Qualidade Cadastro',
-    desc: 'Análise completa da integridade dos cadastros do cidadão, domiciliares e territoriais, com detecção automática de inconsistências e duplicidades.',
-    color: 'bg-amber-50',
+    title: 'Qualidade Cadastros',
+    desc: 'Relatório de inconsistências em fichas de cadastros individuais dos ACS.',
+    tag: 'CADASTROS',
+    tagColor: 'bg-amber-50 text-amber-600',
     iconColor: 'text-amber-600',
-    items: [
-      'Cidadão PEC — Prontuário Cidadão',
-      'Cadastros Domiciliares Territoriais',
-      'Ficha de Cadastro Individual (FCI) e qualidade FCI',
-      'Cidadãos Duplicados e Qualidade Cidadão PEC',
-      'Geolocalização de Cadastro Domiciliar',
-      'FCI Individual Nominal — Autorreferido ACS',
-    ],
+    iconBg: 'bg-amber-50',
   },
   {
-    icon: Footprints,
-    title: 'Acompanhamento Território',
-    desc: 'Monitoramento de visitas domiciliares, cobertura territorial e mapas inteligentes para planejamento das ações dos ACS/ACE.',
-    color: 'bg-emerald-50',
-    iconColor: 'text-emerald-600',
-    items: [
-      'Visitas Domiciliares — Consolidado e Nominal',
-      'Calendário mensal de visitas ACS/ACE',
-      'Mapa Inteligente de Visitas (relevo/satélite)',
-      'Cobertura de Visitas vs. metas municipais',
-      'Mapa Inteligente Territorial de domicílios',
-      'Beneficiários Bolsa Família cruzados com e-SUS',
-      'IVCF-20+ para idosos ≥ 60 anos',
-      'TRIA — Risco de Insegurança Alimentar',
-    ],
-  },
-  {
-    icon: TrendingUp,
-    title: 'Indicadores',
-    desc: 'Monitoramento quantitativo e qualitativo do desempenho municipal, por equipe e por programas específicos.',
-    color: 'bg-indigo-50',
-    iconColor: 'text-indigo-600',
-    items: [
-      'Desempenho Municipal geral',
-      'Indicadores ESF/eAP (C1 a C7 + Vínculo)',
-      'Indicadores eMULTI e eSB',
-      'Indicadores POEPS (MG)',
-      'Indicadores PSE — Saúde na Escola',
-    ],
-  },
-  {
-    icon: ScrollText,
-    title: 'Relatórios',
-    desc: 'Listagens nominais e consolidadas de atendimentos, prescrições, vacinação, condições de saúde e sincronizações.',
-    color: 'bg-rose-50',
+    icon: ClipboardList,
+    title: 'Visitas Domiciliares',
+    desc: 'Relatórios de produtividade e acompanhamento das visitas dos ACS/ACE.',
+    tag: 'VISITAS',
+    tagColor: 'bg-rose-50 text-rose-600',
     iconColor: 'text-rose-600',
-    items: [
-      'Atendimento Individual — nominal e consolidado',
-      'Prescrição de Medicamentos',
-      'Vacinação — Imunos (doses esperadas vs. aplicadas)',
-      'Condições de Saúde Ativa (CID/CIAP)',
-      'Sincronizações de ACS/ACE/TACS',
-    ],
+    iconBg: 'bg-rose-50',
   },
   {
-    icon: Receipt,
-    title: 'Faturamento',
-    desc: 'Extração e validação de procedimentos ambulatoriais do e-SUS PEC para geração do BPA magnético.',
-    color: 'bg-orange-50',
-    iconColor: 'text-orange-600',
-    items: [
-      'BPA-I e BPA-C contra SIGTAP',
-      'Validação de risco de glosa',
-      'Geração de arquivo BPA magnético para SIA',
-    ],
+    icon: Syringe,
+    title: 'Relatório Vacinação',
+    desc: 'Relatórios dos imunobiológicos que foram aplicados ou pendentes para os cidadãos.',
+    tag: 'VACINA',
+    tagColor: 'bg-teal-50 text-teal-600',
+    iconColor: 'text-teal-600',
+    iconBg: 'bg-teal-50',
   },
   {
-    icon: UserCog,
-    title: 'Gestão e Logs',
-    desc: 'Controle de profissionais, lotações, perfis de acesso e histórico completo de auditoria do sistema.',
-    color: 'bg-slate-100',
-    iconColor: 'text-slate-700',
-    items: [
-      'Profissionais — lotações, CBO e perfis de acesso',
-      'Histórico de acessos e ações (últimos 3 meses)',
-      'Auditoria de administradores e gestores',
-    ],
+    icon: Map,
+    title: 'Mapa Visitas Domiciliares',
+    desc: 'Relatórios de acompanhamento das visitas dos ACS/ACE em forma visual/mapa.',
+    tag: 'VISITAS',
+    tagColor: 'bg-rose-50 text-rose-600',
+    iconColor: 'text-rose-600',
+    iconBg: 'bg-rose-50',
+  },
+  {
+    icon: MapPin,
+    title: 'Geolocalização',
+    desc: 'Visualização territorial dos domicílios cadastrados pelos ACS que possuem ou não geolocalização.',
+    tag: 'VISITAS',
+    tagColor: 'bg-rose-50 text-rose-600',
+    iconColor: 'text-rose-600',
+    iconBg: 'bg-rose-50',
   },
 ];
 
@@ -343,31 +301,38 @@ const KodeAps: React.FC = () => {
       </section>
 
       {/* ── SOLUTION SECTION ── */}
-      <section id="funcionalidades" className="py-20 lg:py-28 bg-white">
+      <section id="funcionalidades" className="py-20 lg:py-28 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="inline-block px-3 py-1 bg-blue-50 border border-blue-100 rounded-full text-xs font-bold text-blue-700 uppercase tracking-widest mb-4">A Solução</span>
-            <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mb-6">Uma visão completa da Atenção Primária</h2>
-            <p className="text-lg text-slate-600 leading-relaxed">
-              O Kode APS transforma os dados do e-SUS PEC em módulos organizados para gestão, monitoramento e análise da qualidade da atenção.
+          <div className="text-center max-w-4xl mx-auto mb-16">
+            <span className="inline-block px-3 py-1 bg-blue-50 border border-blue-100 rounded-full text-xs font-bold text-blue-700 uppercase tracking-widest mb-4">Sobre a Plataforma</span>
+            <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mb-6">Inteligência de Dados para uma Gestão Eficiente</h2>
+            <p className="text-lg text-slate-600 leading-relaxed mb-6">
+              O <span className="font-bold text-blue-700">KODE APS</span> é uma plataforma avançada de inteligência de dados projetada para transformar a gestão da Atenção Primária à Saúde. Através da integração direta com as bases do e-SUS PEC, o sistema oferece uma visão panorâmica e detalhada da rede municipal.
             </p>
+            <p className="text-lg text-slate-600 leading-relaxed">
+              Permitimos que gestores e equipes identifiquem falhas cadastrais, monitorem a produtividade das equipes de campo e garantam a precisão dos indicadores do <span className="font-bold text-slate-900">Brasil 360</span>. Nossa missão é proporcionar ferramentas que elevem a qualidade do cuidado ao cidadão através de dados confiáveis e decisões baseadas em evidências.
+            </p>
+          </div>
+          <div className="flex items-center gap-4 mb-8">
+            <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">Principais Módulos</span>
+            <div className="h-px bg-slate-200 flex-1" />
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {solutionModules.map((m) => (
-              <div key={m.title} className="group bg-white border border-slate-200 rounded-2xl p-6 hover:border-blue-300 hover:shadow-lg transition-all duration-300 flex flex-col">
-                <div className={`w-14 h-14 ${m.color} rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform shrink-0`}>
-                  <m.icon size={28} className={m.iconColor} />
+              <div key={m.title} className="group bg-white border border-slate-200 rounded-2xl p-6 hover:border-blue-300 hover:shadow-lg transition-all duration-300 flex flex-col relative">
+                <div className="flex justify-between items-start mb-6">
+                  <div className={`w-12 h-12 ${m.iconBg} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform shrink-0`}>
+                    <m.icon size={24} className={m.iconColor} />
+                  </div>
+                  <ArrowRight size={16} className="text-slate-300 group-hover:text-blue-500 transition-colors" />
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-2">{m.title}</h3>
-                <p className="text-sm text-slate-500 leading-relaxed mb-4">{m.desc}</p>
-                <ul className="mt-auto space-y-1.5 pt-4 border-t border-slate-100">
-                  {m.items.map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-xs text-slate-600 leading-snug">
-                      <span className="mt-1 w-1.5 h-1.5 rounded-full bg-blue-400 shrink-0" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
+                <h3 className="text-lg font-bold text-slate-900 mb-2">{m.title}</h3>
+                <p className="text-sm text-slate-500 leading-relaxed mb-6 flex-1">{m.desc}</p>
+                <div>
+                  <span className={`inline-block px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider ${m.tagColor}`}>
+                    {m.tag}
+                  </span>
+                </div>
               </div>
             ))}
           </div>
