@@ -119,16 +119,6 @@ const faqs = [
   { q: 'Como funciona a implantação?', a: 'A implantação é rápida e não exige infraestrutura complexa. Entre em contato para receber uma proposta personalizada conforme o porte do seu município.' },
 ];
 
-const planFeatures = [
-  'Acesso completo à plataforma',
-  'Indicadores APS (Brasil 360, POEPS, PSE)',
-  'Qualidade cadastral e inconsistências',
-  'Relatórios nominais por equipe',
-  'Monitoramento territorial e visitas',
-  'Dashboard municipal consolidado',
-  'Usuários ilimitados da gestão',
-  'Suporte técnico especializado',
-];
 
 const classifications = [
   { label: 'Regular', color: 'bg-[#c46500]' },
@@ -476,7 +466,7 @@ const KodeAps: React.FC = () => {
               <div className="absolute -bottom-4 -right-4 bg-white rounded-xl shadow-lg border border-slate-100 p-4">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center"><Calendar size={20} className="text-blue-600" /></div>
-                  <div><div className="text-xs font-bold text-slate-500 uppercase">Período</div><div className="text-lg font-black text-slate-900">12 meses</div></div>
+                  <div><div className="text-xs font-bold text-slate-500 uppercase">Período</div><div className="text-lg font-black text-slate-900">Quadrimestre</div></div>
                 </div>
               </div>
             </div>
@@ -734,67 +724,7 @@ const KodeAps: React.FC = () => {
         </div>
       </section>
 
-      {/* ── PLANS SECTION ── */}
-      <section id="planos" className="py-20 lg:py-28 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="inline-block px-3 py-1 bg-blue-50 border border-blue-100 rounded-full text-xs font-bold text-blue-700 uppercase tracking-widest mb-4">Planos</span>
-            <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mb-6">
-              Solução completa para{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-indigo-600">seu município</span>
-            </h2>
-            <p className="text-lg text-slate-600 leading-relaxed">
-              Uma plataforma única para transformar a gestão da Atenção Primária com dados confiáveis e insights acionáveis.
-            </p>
-          </div>
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white rounded-3xl shadow-xl shadow-slate-200/60 border border-slate-200 overflow-hidden">
-              <div className="bg-gradient-to-r from-blue-700 to-indigo-700 p-8 text-white text-center">
-                <div className="inline-block px-4 py-1 bg-white/20 rounded-full text-xs font-bold uppercase tracking-widest mb-4">Plano Municipal</div>
-                <h3 className="text-2xl font-black mb-2">Kode APS Completo</h3>
-                <p className="text-blue-100 text-sm">Tudo que sua secretaria precisa para uma APS orientada por dados</p>
-              </div>
-              <div className="p-8 md:p-10">
-                <div className="grid md:grid-cols-2 gap-8 mb-10">
-                  <div>
-                    <h4 className="text-sm font-black text-slate-900 uppercase tracking-widest mb-6">Incluso no plano</h4>
-                    <ul className="space-y-4">
-                      {planFeatures.slice(0, 4).map((f) => (
-                        <li key={f} className="flex items-start gap-3">
-                          <div className="w-5 h-5 bg-emerald-100 rounded-full flex items-center justify-center shrink-0 mt-0.5"><CheckCircle2 size={12} className="text-emerald-600" /></div>
-                          <span className="text-sm text-slate-600">{f}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-black text-slate-900 uppercase tracking-widest mb-6">&nbsp;</h4>
-                    <ul className="space-y-4">
-                      {planFeatures.slice(4).map((f) => (
-                        <li key={f} className="flex items-start gap-3">
-                          <div className="w-5 h-5 bg-emerald-100 rounded-full flex items-center justify-center shrink-0 mt-0.5"><CheckCircle2 size={12} className="text-emerald-600" /></div>
-                          <span className="text-sm text-slate-600">{f}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-                <div className="border-t border-slate-100 pt-8 flex flex-col sm:flex-row items-center justify-between gap-6">
-                  <div>
-                    <p className="text-sm text-slate-500 mb-1">Preço sob consulta</p>
-                    <p className="text-xs text-slate-400">Valores personalizados por porte do município</p>
-                  </div>
-                  <Link to="/contato" className="inline-flex items-center gap-2 bg-blue-700 hover:bg-blue-800 text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg shadow-blue-700/20 hover:shadow-blue-700/30">
-                    Solicitar Proposta <ArrowRight size={18} />
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <p className="text-center text-xs text-slate-400 mt-8">Implantação rápida • Treinamento incluso • Compatível com e-SUS PEC</p>
-          </div>
-        </div>
-      </section>
-
+      
       {/* ── FAQ SECTION ── */}
       <section id="faq" className="py-20 lg:py-28 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
