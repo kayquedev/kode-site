@@ -6,8 +6,44 @@ import {
   Copy, UserX, UserCheck, Calendar, Stethoscope, ArrowUpRight, Database,
   RefreshCw, ArrowDown, Lock, UserCog, EyeOff, Server, Zap, Lightbulb, Map,
   Building2, Activity, FileBarChart, LayoutDashboard, FileText, ChevronDown,
-  ChevronUp, MessageCircle, Play, Footprints, Receipt, ScrollText
+  ChevronUp, MessageCircle, Play, Footprints, Receipt, ScrollText, X
 } from 'lucide-react';
+
+/* ─── Zoomable Image Component ─── */
+const ZoomableImage: React.FC<{ src: string; alt: string; className?: string }> = ({ src, alt, className }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <>
+      <img
+        src={src}
+        alt={alt}
+        className={`${className || ''} cursor-zoom-in transition-opacity hover:opacity-90`}
+        onClick={() => setIsOpen(true)}
+        loading="lazy"
+      />
+      {isOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm p-4 animate-in fade-in duration-200"
+          onClick={() => setIsOpen(false)}
+        >
+          <button
+            onClick={() => setIsOpen(false)}
+            className="absolute top-4 right-4 p-2 bg-white/10 hover:bg-white/20 rounded-full text-white transition-colors"
+          >
+            <X size={24} />
+          </button>
+          <img
+            src={src}
+            alt={alt}
+            className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          />
+          <p className="absolute bottom-4 text-white/70 text-sm">{alt}</p>
+        </div>
+      )}
+    </>
+  );
+};
 
 /* ─── Data ─── */
 const problems = [
@@ -265,7 +301,7 @@ const KodeAps: React.FC = () => {
                   <div className="flex gap-1.5"><div className="w-3 h-3 rounded-full bg-red-400" /><div className="w-3 h-3 rounded-full bg-amber-400" /><div className="w-3 h-3 rounded-full bg-emerald-400" /></div>
                   <div className="flex-1 bg-white rounded-md px-3 py-1 text-xs text-slate-400 font-mono ml-2">kodeaps.com.br/dashboard</div>
                 </div>
-                <img src="/images/dashboard-indicadores.png" alt="Dashboard de Indicadores APS" className="w-full h-auto block" loading="lazy" />
+                <ZoomableImage src="/images/dashboard-indicadores.png" alt="Dashboard de Indicadores APS" className="w-full h-auto block" />
               </div>
               <div className="absolute -top-4 -right-4 bg-white rounded-xl shadow-lg shadow-slate-200/50 border border-slate-100 p-4">
                 <div className="flex items-center gap-3">
@@ -395,7 +431,7 @@ const KodeAps: React.FC = () => {
                   <div className="flex gap-1.5"><div className="w-3 h-3 rounded-full bg-red-400" /><div className="w-3 h-3 rounded-full bg-amber-400" /><div className="w-3 h-3 rounded-full bg-emerald-400" /></div>
                   <div className="flex-1 bg-white rounded-md px-3 py-1 text-xs text-slate-400 font-mono ml-2">kodeaps.com.br/qualidade-cadastro</div>
                 </div>
-                <img src="/images/qualidade-cadastro.jpeg" alt="Tela de Qualidade Cadastral" className="w-full h-auto block" loading="lazy" />
+                <ZoomableImage src="/images/qualidade-cadastro.jpeg" alt="Tela de Qualidade Cadastral" className="w-full h-auto block" />
               </div>
               <div className="absolute -bottom-4 -right-4 bg-white rounded-xl shadow-lg border border-slate-100 p-4">
                 <div className="flex items-center gap-3">
@@ -418,7 +454,7 @@ const KodeAps: React.FC = () => {
                   <div className="flex gap-1.5"><div className="w-3 h-3 rounded-full bg-red-400" /><div className="w-3 h-3 rounded-full bg-amber-400" /><div className="w-3 h-3 rounded-full bg-emerald-400" /></div>
                   <div className="flex-1 bg-white rounded-md px-3 py-1 text-xs text-slate-400 font-mono ml-2">kodeaps.com.br/indicadores/dashboard</div>
                 </div>
-                <img src="/images/Do indicador ao cidadão.jpeg" alt="Relatório do Indicador ao Cidadão" className="w-full h-auto block" loading="lazy" />
+                <ZoomableImage src="/images/Do indicador ao cidadão.jpeg" alt="Relatório do Indicador ao Cidadão" className="w-full h-auto block" />
               </div>
               <div className="absolute -top-4 -left-4 bg-white rounded-xl shadow-lg border border-slate-100 p-4">
                 <div className="flex items-center gap-3">
@@ -509,7 +545,7 @@ const KodeAps: React.FC = () => {
                   <div className="flex gap-1.5"><div className="w-3 h-3 rounded-full bg-red-400" /><div className="w-3 h-3 rounded-full bg-amber-400" /><div className="w-3 h-3 rounded-full bg-emerald-400" /></div>
                   <div className="flex-1 bg-white rounded-md px-3 py-1 text-xs text-slate-400 font-mono ml-2">kodeaps.com.br/relatorios/nominal</div>
                 </div>
-                <img src="/images/nominal-indicadores.jpeg" alt="Relatório Nominal de Indicadores" className="w-full h-auto block" loading="lazy" />
+                <ZoomableImage src="/images/nominal-indicadores.jpeg" alt="Relatório Nominal de Indicadores" className="w-full h-auto block" />
               </div>
               <div className="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-lg border border-slate-100 p-4">
                 <div className="flex items-center gap-3">
@@ -559,7 +595,7 @@ const KodeAps: React.FC = () => {
                   <div className="flex gap-1.5"><div className="w-3 h-3 rounded-full bg-red-400" /><div className="w-3 h-3 rounded-full bg-amber-400" /><div className="w-3 h-3 rounded-full bg-emerald-400" /></div>
                   <div className="flex-1 bg-white rounded-md px-3 py-1 text-xs text-slate-400 font-mono ml-2">kodeaps.com.br/indicadores/evolucao</div>
                 </div>
-                <img src="/images/evolucao-indicadore.jpeg" alt="Gráfico de Evolução dos Indicadores" className="w-full h-auto block" loading="lazy" />
+                <ZoomableImage src="/images/evolucao-indicadore.jpeg" alt="Gráfico de Evolução dos Indicadores" className="w-full h-auto block" />
               </div>
               <div className="absolute -bottom-4 -right-4 bg-white rounded-xl shadow-lg border border-slate-100 p-4">
                 <div className="flex items-center gap-3">
