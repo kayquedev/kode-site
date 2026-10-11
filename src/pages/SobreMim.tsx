@@ -90,7 +90,7 @@ const SobreMim: React.FC = () => {
             <div className="relative aspect-[3/4] max-h-[600px] bg-slate-100 rounded-3xl overflow-hidden border border-slate-200 shadow-xl flex items-center justify-center">
               {/* Placeholder for professional photo */}
               <img
-                src="/images/kayque.jpg"
+                src="/images/kayque-foto.png"
                 alt="Kayque Oliveira"
                 className="w-full h-full object-cover"
                 onError={(e) => {
@@ -103,7 +103,7 @@ const SobreMim: React.FC = () => {
                         <span class="text-3xl font-black text-slate-400">KO</span>
                       </div>
                       <span class="font-medium">Foto Profissional</span>
-                      <span class="text-xs mt-2 opacity-60">/public/images/kayque.jpg</span>
+                      <span class="text-xs mt-2 opacity-60">/public/images/kayque-foto.png</span>
                     </div>
                   `;
                 }}
