@@ -163,9 +163,7 @@ const cadastroFeatures = [
 
 const steps = [
   { icon: Database, title: 'e-SUS PEC', desc: 'Dados brutos da Atenção Primária registrados pelas equipes no sistema nacional.', color: 'bg-slate-100', iconColor: 'text-slate-600' },
-  { icon: RefreshCw, title: 'Extração e tratamento', desc: 'Leitura segura dos dados sem alteração da base original do município.', color: 'bg-blue-50', iconColor: 'text-blue-600' },
   { icon: BarChart3, title: 'Análise e organização', desc: 'Processamento dos registros em indicadores, cadastros e relatórios estruturados.', color: 'bg-indigo-50', iconColor: 'text-indigo-600' },
-  { icon: FileCheck, title: 'Indicadores e relatórios', desc: 'Visualização clara de desempenho, pendências e qualidade cadastral.', color: 'bg-emerald-50', iconColor: 'text-emerald-600' },
   { icon: Users, title: 'Gestão e decisão', desc: 'Equipes e gestores agem com base em dados confiáveis e listas nominais.', color: 'bg-amber-50', iconColor: 'text-amber-600' },
 ];
 

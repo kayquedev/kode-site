@@ -67,7 +67,7 @@ const SobreMim: React.FC = () => {
 
             <div className="prose prose-lg text-slate-600 leading-relaxed space-y-4">
               <p>
-                <strong className="text-slate-900">Kayque da Silva Oliveira</strong> atua na área da saúde pública municipal
+                <strong className="text-slate-900">Kayque Oliveira</strong> atua na área da saúde pública municipal
                 e possui experiência prática na Atenção Primária à Saúde, sistemas de informação em saúde,
                 análise de dados e processos relacionados ao SUS.
               </p>
@@ -91,7 +91,7 @@ const SobreMim: React.FC = () => {
               {/* Placeholder for professional photo */}
               <img
                 src="/images/kayque.jpg"
-                alt="Kayque da Silva Oliveira"
+                alt="Kayque Oliveira"
                 className="w-full h-full object-cover"
                 onError={(e) => {
                   // Fallback elegant placeholder if image doesn't exist
