@@ -4,7 +4,7 @@ import {
   ArrowRight, BarChart3, Users, MapPin, FileCheck, AlertTriangle, FileX,
   SearchX, PieChart, Clock, TrendingUp, ShieldCheck, CheckCircle2, AlertCircle,
   Copy, UserX, UserCheck, Calendar, Stethoscope, ArrowUpRight, Database,
-  ArrowDown, Lock, UserCog, EyeOff, Server, Zap, Lightbulb, Map,
+  Lock, UserCog, EyeOff, Server, Zap, Lightbulb, Map,
   Activity, LayoutDashboard, FileText, ChevronDown,
   ChevronUp, MessageCircle, Play, X, Syringe, Footprints, Receipt, ScrollText
 } from 'lucide-react';
@@ -159,12 +159,6 @@ const cadastroFeatures = [
   { icon: Copy, title: 'Cadastros duplicados', desc: 'Detecção de cidadãos com múltiplos cadastros no sistema, permitindo unificação e correção.', color: 'text-red-600', bg: 'bg-red-50' },
   { icon: UserX, title: 'Dados desatualizados', desc: 'Alertas para cadastros que precisam de revisão ou atualização periódica pelas equipes.', color: 'text-orange-600', bg: 'bg-orange-50' },
   { icon: MapPin, title: 'Geolocalização pendente', desc: 'Visualização de domicílios sem coordenadas geográficas registradas para planejamento territorial.', color: 'text-blue-600', bg: 'bg-blue-50' },
-];
-
-const steps = [
-  { icon: Database, title: 'e-SUS PEC', desc: 'Dados brutos da Atenção Primária registrados pelas equipes no sistema nacional.', color: 'bg-slate-100', iconColor: 'text-slate-600' },
-  { icon: BarChart3, title: 'Análise e organização', desc: 'Processamento dos registros em indicadores, cadastros e relatórios estruturados.', color: 'bg-indigo-50', iconColor: 'text-indigo-600' },
-  { icon: Users, title: 'Gestão e decisão', desc: 'Equipes e gestores agem com base em dados confiáveis e listas nominais.', color: 'bg-amber-50', iconColor: 'text-amber-600' },
 ];
 
 const securityFeatures = [
@@ -584,67 +578,7 @@ const KodeAps: React.FC = () => {
         </div>
       </section>
 
-      {/* ── HOW IT WORKS ── */}
-      <section className="py-20 lg:py-28 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="inline-block px-3 py-1 bg-blue-50 border border-blue-100 rounded-full text-xs font-bold text-blue-700 uppercase tracking-widest mb-4">Como Funciona</span>
-            <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mb-6">
-              Do dado bruto à{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-indigo-600">tomada de decisão</span>
-            </h2>
-            <p className="text-lg text-slate-600 leading-relaxed">
-              O Kode APS transforma os dados do e-SUS PEC em informações acionáveis através de um fluxo seguro e automatizado.
-            </p>
-          </div>
-          <div className="relative">
-            <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-slate-200 -translate-x-1/2" />
-            <div className="space-y-8 lg:space-y-0">
-              {steps.map((step, i) => (
-                <div key={step.title} className={`lg:flex items-center gap-8 ${i > 0 ? 'lg:mt-12' : ''}`}>
-                  <div className={`lg:w-1/2 ${i % 2 === 0 ? 'lg:text-right lg:pr-12' : 'lg:order-2 lg:pl-12'}`}>
-                    <div className="bg-white border border-slate-200 rounded-2xl p-6 hover:border-blue-300 hover:shadow-md transition-all duration-300">
-                      <div className={`flex items-center gap-4 ${i % 2 === 0 ? 'lg:flex-row-reverse' : ''}`}>
-                        <div className={`w-12 h-12 ${step.color} rounded-xl flex items-center justify-center shrink-0`}>
-                          <step.icon size={24} className={step.iconColor} />
-                        </div>
-                        <div className={i % 2 === 0 ? 'lg:text-right' : ''}>
-                          <h3 className="text-lg font-bold text-slate-900 mb-1">{step.title}</h3>
-                          <p className="text-sm text-slate-500 leading-relaxed">{step.desc}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 w-10 h-10 bg-white border-4 border-blue-100 rounded-full items-center justify-center z-10" style={{ top: `${i * 80 + 40}px` }}>
-                    <span className="text-xs font-black text-blue-600">{i + 1}</span>
-                  </div>
-                  <div className={`lg:w-1/2 ${i % 2 === 0 ? 'lg:order-2 lg:pl-12' : 'lg:text-right lg:pr-12'}`}>
-                    {i % 2 !== 0 && (
-                      <div className="bg-white border border-slate-200 rounded-2xl p-6 hover:border-blue-300 hover:shadow-md transition-all duration-300">
-                        <div className="flex items-center gap-4 lg:flex-row-reverse">
-                          <div className={`w-12 h-12 ${step.color} rounded-xl flex items-center justify-center shrink-0`}>
-                            <step.icon size={24} className={step.iconColor} />
-                          </div>
-                          <div className="lg:text-right">
-                            <h3 className="text-lg font-bold text-slate-900 mb-1">{step.title}</h3>
-                            <p className="text-sm text-slate-500 leading-relaxed">{step.desc}</p>
-                          </div>
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                  {i < steps.length - 1 && (
-                    <div className="lg:hidden flex justify-center py-2">
-                      <ArrowDown size={20} className="text-slate-300" />
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
+      
       {/* ── SECURITY SECTION ── */}
       <section className="py-20 lg:py-28 bg-slate-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
