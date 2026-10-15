@@ -85,9 +85,9 @@ const SobreMim: React.FC = () => {
           </div>
 
           {/* Photo */}
-          <div className="relative">
-            <div className="absolute inset-0 bg-brand-200/20 blur-3xl rounded-full transform scale-95" />
-            <div className="relative aspect-[3/4] max-h-[600px] bg-slate-100 rounded-3xl overflow-hidden border border-slate-200 shadow-xl flex items-center justify-center">
+          <div className="relative flex flex-col items-center">
+            <div className="absolute inset-0 bg-brand-200/20 blur-3xl rounded-full transform scale-95 pointer-events-none" />
+            <div className="relative aspect-[3/4] max-h-[600px] w-full bg-slate-100 rounded-3xl overflow-hidden border border-slate-200 shadow-xl flex items-center justify-center">
               <img
                 src="/images/kayque-foto2.jpg"
                 alt="Kayque Oliveira"
