@@ -87,7 +87,7 @@ const Contato: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-slate-900 mb-1">Telefone / WhatsApp</h4>
-                  <p className="text-slate-600">(00) 0000-0000</p>
+                  <p className="text-slate-600">(37) 9 9876-7859</p>
                 </div>
               </div>
 
