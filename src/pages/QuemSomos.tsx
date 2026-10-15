@@ -13,7 +13,7 @@ const QuemSomos: React.FC = () => {
             title="Tecnologia com propósito na saúde pública."
           />
           <p className="mt-6 text-xl text-slate-600 leading-relaxed">
-            A Kode Saúde desenvolve soluções tecnológicas voltadas às necessidades reais
+            A Kode Gestão em Saúde desenvolve soluções tecnológicas voltadas às necessidades reais
             da gestão pública em saúde, buscando transformar dados e processos em ferramentas
             práticas para profissionais, equipes e gestores.
           </p>

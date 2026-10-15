@@ -3,7 +3,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle2 } from 'lucide-react';
 import SectionTitle from '../components/ui/SectionTitle';
 
 const solutions = [
-  'Kode Saúde',
+  'Kode Gestão em Saúde',
   'Kode APS',
   'Kode Endemias',
   'Ferramentas',

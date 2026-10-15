@@ -62,7 +62,7 @@ const KodeSaude: React.FC = () => {
           title="Todos os módulos que sua secretaria precisa."
         />
         <p className="mt-4 text-slate-600 max-w-3xl mb-12">
-          A arquitetura do Kode Saúde permite ativar apenas os módulos necessários para
+          A arquitetura do Kode Gestão em Saúde permite ativar apenas os módulos necessários para
           seu município, garantindo simplicidade na implantação e escalabilidade conforme
           a demanda cresce.
         </p>
@@ -115,7 +115,7 @@ const KodeSaude: React.FC = () => {
           Modernize a saúde do seu município.
         </h2>
         <p className="text-slate-600 mb-8 text-lg">
-          Agende uma apresentação técnica e veja como o Kode Saúde pode se adaptar à realidade local.
+          Agende uma apresentação técnica e veja como o Kode Gestão em Saúde pode se adaptar à realidade local.
         </p>
         <Link to="/contato" className="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-bold px-10 py-4 rounded-xl transition-all">
           Falar com consultor <ArrowRight size={20} />

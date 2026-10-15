@@ -50,7 +50,7 @@ const Home: React.FC = () => {
               title="Tecnologia desenvolvida a partir da realidade da saúde pública."
             />
             <p className="text-slate-600 leading-relaxed">
-              A Kode Saúde desenvolve soluções tecnológicas voltadas às necessidades reais
+              A Kode Gestão em Saúde desenvolve soluções tecnológicas voltadas às necessidades reais
               da gestão pública em saúde, buscando transformar dados e processos em ferramentas
               práticas para profissionais, equipes e gestores.
             </p>
@@ -97,12 +97,12 @@ const Home: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Kode Saúde Card */}
+            {/* Kode Gestão em Saúde Card */}
             <div className="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-xl transition-all group">
               <div className="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-600 transition-colors">
                 <Activity size={24} className="text-brand-600 group-hover:text-white transition-colors" />
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-3">Kode Saúde</h3>
+              <h3 className="text-2xl font-bold text-slate-900 mb-3">Kode Gestão em Saúde</h3>
               <p className="text-slate-600 mb-6 leading-relaxed">
                 Plataforma completa de gestão pública em saúde. Módulos integrados para
                 recepção, atendimento, farmácia, laboratório, regulação e faturamento SUS.
@@ -159,7 +159,7 @@ const Home: React.FC = () => {
             Pronto para modernizar a gestão?
           </h2>
           <p className="text-slate-300 max-w-2xl mx-auto mb-10 text-lg relative z-10">
-            Entre em contato e descubra como as soluções Kode Saúde podem transformar
+            Entre em contato e descubra como as soluções Kode Gestão em Saúde podem transformar
             a realidade do seu município.
           </p>
           <Link

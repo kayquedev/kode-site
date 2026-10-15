@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
           {/* Brand */}
           <div className="space-y-4">
             <Link to="/" className="flex items-center gap-2">
-              <img src="/images/logo-kode-white.png" alt="Kode Saúde" className="h-8 w-auto" />
+              <img src="/images/logo-kode-white.png" alt="Kode Gestão em Saúde" className="h-8 w-auto" />
               <span className="text-xl font-black text-white tracking-tight">
                 Kode <span className="text-brand-400">Saúde</span>
               </span>
@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-xs font-black text-white uppercase tracking-widest mb-4">Soluções</h4>
             <ul className="space-y-3">
-              <li><Link to="/kode-saude" className="text-sm hover:text-brand-400 transition-colors">Kode Saúde</Link></li>
+              <li><Link to="/kode-saude" className="text-sm hover:text-brand-400 transition-colors">Kode Gestão em Saúde</Link></li>
               <li><Link to="/kode-aps" className="text-sm hover:text-brand-400 transition-colors">Kode APS</Link></li>
               <li><Link to="/kode-endemias" className="text-sm hover:text-brand-400 transition-colors">Kode Endemias</Link></li>
               <li><Link to="/ferramentas" className="text-sm hover:text-brand-400 transition-colors">Ferramentas</Link></li>
@@ -75,7 +75,7 @@ const Footer: React.FC = () => {
         {/* Bottom Bar */}
         <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-slate-500">
-            &copy; {new Date().getFullYear()} Kode Saúde. Todos os direitos reservados.
+            &copy; {new Date().getFullYear()} Kode Gestão em Saúde. Todos os direitos reservados.
           </p>
           <div className="flex items-center gap-6">
             <Link to="/lgpd" className="text-xs text-slate-500 hover:text-slate-300 transition-colors">Política de Privacidade</Link>

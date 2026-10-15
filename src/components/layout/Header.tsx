@@ -14,7 +14,7 @@ const Header: React.FC = () => {
     {
       label: 'Soluções',
       children: [
-        { label: 'Kode Saúde', href: '/kode-saude' },
+        { label: 'Kode Gestão em Saúde', href: '/kode-saude' },
         { label: 'Kode APS', href: '/kode-aps' },
         { label: 'Kode Endemias', href: '/kode-endemias' },
         { label: 'Ferramentas', href: '/ferramentas' },
@@ -39,10 +39,10 @@ const Header: React.FC = () => {
           <Link to="/" className="flex items-center gap-3 group">
             <img
               src="/images/kode-saude-logo.png"
-              alt="Kode Saúde"
+              alt="Kode Gestão em Saúde"
               className="h-10 w-auto"
             />
-            <span className="text-xl font-black text-slate-900 tracking-tight">Kode Saúde</span>
+            <span className="text-xl font-black text-slate-900 tracking-tight">Kode Gestão em Saúde</span>
           </Link>
 
           {/* Desktop Nav */}

@@ -12,7 +12,7 @@ const Lgpd: React.FC = () => {
             title="Compromisso com a proteção dos seus dados."
           />
           <p className="mt-6 text-xl text-slate-600 leading-relaxed">
-            A Kode Saúde entende que dados de saúde são sensíveis e exigem tratamento especial.
+            A Kode Gestão em Saúde entende que dados de saúde são sensíveis e exigem tratamento especial.
             Nossas soluções são desenvolvidas considerando princípios e requisitos aplicáveis da LGPD,
             garantindo transparência, segurança e respeito à privacidade.
           </p>

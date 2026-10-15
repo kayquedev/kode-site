@@ -35,7 +35,7 @@ const tools = [
     link: '/kode-endemias',
   },
   {
-    name: 'Kode Saúde',
+    name: 'Kode Gestão em Saúde',
     category: 'Plataformas',
     description: 'Plataforma completa para gestão municipal na Média Complexidade: atendimento ao cidadão, Regulação, Transporte, faturamento e relatórios gerenciais.',
     icon: HeartPulse,

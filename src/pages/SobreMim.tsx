@@ -46,7 +46,7 @@ const timeline = [
   },
   {
     icon: Briefcase,
-    title: 'Kode Saúde',
+    title: 'Kode Gestão em Saúde',
     date: '2026',
     desc: 'Fundação da empresa para unir tecnologia e saúde pública.',
     subtitle: ''
@@ -62,7 +62,7 @@ const SobreMim: React.FC = () => {
           <div className="space-y-8">
             <SectionTitle
               subtitle="SOBRE O FUNDADOR"
-              title="Quem está por trás da Kode Saúde."
+              title="Quem está por trás da Kode Gestão em Saúde."
             />
 
             <div className="prose prose-lg text-slate-600 leading-relaxed space-y-4">
@@ -78,7 +78,7 @@ const SobreMim: React.FC = () => {
               </p>
               <p>
                 Essa vivência levou à criação de ferramentas voltadas para facilitar rotinas, melhorar análises
-                e apoiar decisões. A Kode Saúde surge da união entre conhecimento em tecnologia e experiência
+                e apoiar decisões. A Kode Gestão em Saúde surge da união entre conhecimento em tecnologia e experiência
                 prática dentro da saúde pública.
               </p>
             </div>
