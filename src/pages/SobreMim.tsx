@@ -1,4 +1,4 @@
-import { Code2, HeartPulse, GraduationCap, School, Briefcase, Monitor, Activity, FileText, Database, Server, Users, Shield } from 'lucide-react';
+import { Code2, HeartPulse, GraduationCap, School, Briefcase, Monitor, Activity, FileText, Database, Server, Users, Shield, Instagram, Youtube } from 'lucide-react';
 import SectionTitle from '../components/ui/SectionTitle';
 
 const systems = [
@@ -84,17 +84,15 @@ const SobreMim: React.FC = () => {
             </div>
           </div>
 
-          {/* Photo Placeholder */}
+          {/* Photo */}
           <div className="relative">
             <div className="absolute inset-0 bg-brand-200/20 blur-3xl rounded-full transform scale-95" />
             <div className="relative aspect-[3/4] max-h-[600px] bg-slate-100 rounded-3xl overflow-hidden border border-slate-200 shadow-xl flex items-center justify-center">
-              {/* Placeholder for professional photo */}
               <img
-                src="/images/kayque-foto.png"
+                src="/images/kayque-foto2.jpg"
                 alt="Kayque Oliveira"
                 className="w-full h-full object-cover"
                 onError={(e) => {
-                  // Fallback elegant placeholder if image doesn't exist
                   const target = e.target as HTMLImageElement;
                   target.style.display = 'none';
                   target.parentElement!.innerHTML = `
@@ -103,11 +101,32 @@ const SobreMim: React.FC = () => {
                         <span class="text-3xl font-black text-slate-400">KO</span>
                       </div>
                       <span class="font-medium">Foto Profissional</span>
-                      <span class="text-xs mt-2 opacity-60">/public/images/kayque-foto.png</span>
+                      <span class="text-xs mt-2 opacity-60">/public/images/kayque-foto2.jpg</span>
                     </div>
                   `;
                 }}
               />
+            </div>
+            {/* Social Buttons */}
+            <div className="mt-6 flex gap-4 justify-center">
+              <a
+                href="https://www.youtube.com/@kayque_esus"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-5 py-3 bg-red-600 hover:bg-red-700 text-white rounded-xl font-semibold transition-colors shadow-md hover:shadow-lg"
+              >
+                <Youtube size={20} />
+                <span>YouTube</span>
+              </a>
+              <a
+                href="https://instagram.com/kayque_esus"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-5 py-3 bg-pink-600 hover:bg-pink-700 text-white rounded-xl font-semibold transition-colors shadow-md hover:shadow-lg"
+              >
+                <Instagram size={20} />
+                <span>Instagram</span>
+              </a>
             </div>
           </div>
         </div>
