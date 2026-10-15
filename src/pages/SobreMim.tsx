@@ -1,4 +1,4 @@
-import { Code2, HeartPulse, GraduationCap, School, Briefcase, Monitor, Activity, FileText, Database, Server, Users, Shield, Instagram, Youtube } from 'lucide-react';
+import { Code2, HeartPulse, GraduationCap, School, Briefcase, Monitor, Activity, FileText, Database, Server, Users, Shield } from 'lucide-react';
 import SectionTitle from '../components/ui/SectionTitle';
 
 const systems = [
@@ -115,7 +115,7 @@ const SobreMim: React.FC = () => {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-5 py-3 bg-red-600 hover:bg-red-700 text-white rounded-xl font-semibold transition-colors shadow-md hover:shadow-lg"
               >
-                <Youtube size={20} />
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><polygon points="10 15 15 12 10 9 10 15"/></svg>
                 <span>YouTube</span>
               </a>
               <a
@@ -124,7 +124,7 @@ const SobreMim: React.FC = () => {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-5 py-3 bg-pink-600 hover:bg-pink-700 text-white rounded-xl font-semibold transition-colors shadow-md hover:shadow-lg"
               >
-                <Instagram size={20} />
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
                 <span>Instagram</span>
               </a>
             </div>
